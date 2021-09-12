@@ -1,0 +1,35 @@
+= My Personal Setup for MacOS
+
+== Brew
+
+[source, bash]
+--
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+--
+
+=== Pakets
+
+include::brew_packages[indent=1]
+
+== Fish Shell
+
+[source, bash]
+--
+brew install fish
+--
+
+=== Theming & Plugins by link:https://github.com/oh-my-fish/oh-my-fish[Oh my Fish]
+
+[source, fish]
+--
+omf update
+omf install godfather
+omf install z
+omf install fzf
+omf theme godfather
+--
+
+== ITerm2
+
+link:https://iterm2.com/downloads/stable/latest[Installer]
+
