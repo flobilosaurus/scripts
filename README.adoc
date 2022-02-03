@@ -22,14 +22,37 @@ brew install fish
 
 [source, fish]
 --
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 omf update
 omf install godfather
-omf install z
 omf install fzf
 omf theme godfather
+--
+
+=== Plugins by link:https://github.com/jorgebucaran/fisher[Fisher]
+
+[source, fish]
+--
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher install jethrokuan/z
 --
 
 == ITerm2
 
 link:https://iterm2.com/downloads/stable/latest[Installer]
 
+== link:https://github.com/ryanoasis/nerd-fonts[NerdFonts]
+
+[source, fish]
+--
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+--
+
+== link:https://github.com/powerline/fonts[PowerLine Fonts]
+
+[source, fish]
+--
+git clone https://github.com/powerline/fonts.git
+./fonts/install.sh
+--
