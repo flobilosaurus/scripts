@@ -56,3 +56,32 @@ brew install --cask font-hack-nerd-font
 git clone https://github.com/powerline/fonts.git
 ./fonts/install.sh
 --
+
+
+== shell diff tool link:https://github.com/dandavison/delta[Delta]
+
+[source, fish]
+--
+brew install git-delta
+--
+
+Add settings to ~/.gitconfig
+
+[source]
+--
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    side-by-side = true
+	
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+--
