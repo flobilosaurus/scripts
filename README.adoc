@@ -35,6 +35,7 @@ omf theme godfather
 --
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jethrokuan/z
+fisher install evanlucas/fish-kubectl-completions
 --
 
 == ITerm2
