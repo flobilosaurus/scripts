@@ -1,0 +1,3 @@
+function is_module_destroyed --wraps=tg\ state\ pull\ \|\ jq\ \'isempty\(.resources\)\' --wraps=tg\ state\ pull\ \|\ jq\ \'.resources\ \|\ length\ ==\ 0\' --wraps=echo\ \(pwd\)\ \&\&\ tg\ state\ pull\ \|\ jq\ \'.resources\ \|\ length\ ==\ 0\' --wraps=echo\ \(pwd\)\ \(tg\ state\ pull\ \|\ jq\ \'.resources\ \|\ length\ ==\ 0\'\) --wraps=echo\ \(pwd\)\ \(tg\ --terragrunt-no-auto-init\ state\ pull\ \|\ jq\ \'.resources\ \|\ length\ ==\ 0\'\) --wraps=echo\ \(pwd\)\ \(tg\ state\ pull\ --terragrunt-no-auto-init\ \|\ jq\ \'.resources\ \|\ length\ ==\ 0\'\) --description alias\ is_module_destroyed=echo\ \(pwd\)\ \(tg\ state\ pull\ \|\ jq\ \'.resources\ \|\ length\ ==\ 0\'\)
+  echo (pwd) (tg state pull | jq '.resources | length == 0') $argv; 
+end
